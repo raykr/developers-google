@@ -50,14 +50,14 @@
 增加一个文件：
 
 1. 在Sources面板左边栏右键。
-2. 选择`New File`
+2. 选择**New File**
 3. 输入文件名字，包含扩展名（例如`newspricts.js`），敲击回车键保存。这个文件便新增进本地的文件夹中。
 
 ### 删除文件
 删除一个文件：
 
 1. 右键点击Sources面板左边栏。
-2. 选择`Delete`，点击`Yes`，确认删除。
+2. 选择**Delete**，点击**Yes**，确认删除。
 
 ### 备份文件
 当文件在做大量修改之前，我们一般都会备份一份，以备还原之用。
@@ -69,3 +69,20 @@
 3. 输入文件名字，包含扩展名（例如`mysytles-org.css`），回车保存。
 
 ### 刷新
+当创建和删除工作空间的文件时，资源目录会自动刷新并显示文件的变化。任何时候你都可以通过在文件目录上点击鼠标右键选择**Refresh**来强制刷新。
+
+当你再外部编辑器里打开了文件并修改内容，而又想在DevTools里看到变化，强制刷新功能将十分有用。一般情况下DevTools会自动检测文件变动，但是如果你想确保万无一失，用上述方法强制刷新一下就可以了。
+
+### 搜索文件或文本
+如果想要搜索在DevTools中已加载的文件内容，使用快捷键`Ctrl` + `O`或`Cmd` + `O`(Mac)即可打开搜索框。你也可以在整个工作空间中搜索，只不过查找范围会扩大到在工作空间内的所有远程和本地的文件。
+
+搜索文件内容：
+
+1. 打开搜索窗口两种方式：一是**ESC**键或点击DevTools右上角菜单，选择**Show Console Drawer**，会在面板下方打开Console组合面板，选择**Search**标签页，如果没有Search，可点击该面板左上角菜单，打开列表选择即可。而是直接使用组合快捷键`Ctrl` + `Shift` + `F`或`Cmd` + `Opt` + `F`（Mac）打开搜索窗口。
+2. 输入要搜索的字符后会车。
+3. 如果要搜索的字符遵循正则表达式或忽略大小写，勾选搜索框后边的多选框即可。
+
+![searchacross](https://developers.google.com/web/tools/setup/imgs/searchacross.png)
+
+Console组合面板中会显示出搜索结果，按名称排序，并且在查询匹配的文字前面标注着该文件一共匹配的数量。使用**展开**![expand_button](https://developers.google.com/web/tools/setup/imgs/expand_button.png)和**合并**![collapse_button](https://developers.google.com/web/tools/setup/imgs/collapse_button.png)按钮来查看详细结果。
+
