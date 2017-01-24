@@ -8,12 +8,12 @@ https://developers.google.com/web/tools/setup/
 > 划删除线的目录为已翻译文章
 
 * Getting Started
-    * [~~Overview~~](setup)
-    * [~~Setup Your Editor~~](setup/setup-editor.md)
-    * [~~Setup Persistence with DevTools Workspaces~~](setup/set)
-    * [Setup Command Line Shortcuts]()
-    * [Setup Browser Extensions]()
-    * [Setup Your Build Tools]()
+    *[x] [Overview](setup)
+    *[x] [Setup Your Editor](setup/setup-editor.md)
+    *[x] [Setup Persistence with DevTools Workspaces](setup/set)
+    *[ ] [Setup Command Line Shortcuts]()
+    *[ ] [Setup Browser Extensions]()
+    *[ ] [Setup Your Build Tools]()
 * Chrome DevTools
     * Overview(chrome-devtools)
     * Configure and Customize DevTools
