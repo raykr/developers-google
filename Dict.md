@@ -52,4 +52,33 @@ US [səb'stænʃ(ə)l] UK [səb'stænʃ(ə)l]
 
 `Web` 实质的；牢固的；可观的
 
+## transpiler
+   
+`Web` 转换编译器
+
+## accelerate
+US [ək'selə.reɪt] UK [ək'seləreɪt]
+
+`v.` 加快；加速
+
+`n.` 接受速成教育的学生
+
+`Web` 促进；增速；催促
+
+## arbitrary
+US ['ɑrbɪ.treri] UK ['ɑː(r)bɪtrəri]
+
+`adj.` 任意的；武断的；随心所欲的；专横的
+
+`Web` 专断的；随意的；任意角度
+
+## apparent
+US [ə'perənt] UK [ə'pærənt]
+
+`adj.` 显然；显而易见；明白易懂；貌似的
+
+`Web` 明显的；显然的；表面上的
+
+## work around
+`Web` 绕过；来绕开；绕个弯解决
 
