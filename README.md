@@ -11,7 +11,7 @@ https://developers.google.com/web/tools/setup/
     * [~~Overview~~](setup)
     * [~~Setup Your Editor~~](setup/setup-editor.md)
     * [~~Setup Persistence with DevTools Workspaces~~](setup/setup-workflow.md)
-    * [Setup CSS & JS Preprocessors]()
+    * [~~Setup CSS & JS Preprocessors~~](setup/setup-preprocessors.md)
     * [Setup Command Line Shortcuts]()
     * [Setup Browser Extensions]()
     * [Setup Your Build Tools]()
