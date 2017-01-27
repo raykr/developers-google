@@ -92,35 +92,35 @@ X-SourceMap: /path/to/file.js.map
 
 ## 支持的预编译器
 
- You can additionally use Source Maps on the server side within Node, in our CSS with via Sass, Less and more, using browserify which gives you node-style require abilities, and through minification tools like uglify-js which also adds the neat ability to generate multi-level Source Maps.
-几乎当下所有的JS编译器都有生成资源映射文件的选项，包括`Coffeescript`,`TypeScript`,`JSX`等等。另外，你可以在Node服务器中使用映射资源文件，在CSS中使用Sass,Less等预编译器，使用[browserify](http://blog.fens.me/nodejs-browserify/)（一款可以跑在浏览器上的Node程序）
+几乎当下所有的JS编译器都有生成资源映射文件的选项，包括`Coffeescript`,`TypeScript`,`JSX`等等。另外，你可以在Node服务器中使用映射资源文件，在CSS中使用Sass,Less等预编译器，使用[browserify](http://blog.fens.me/nodejs-browserify/)（一款可以跑在浏览器上的Node程序）来实现前端js直接运行node服务器程序，还可以使用压缩工具（如`uglify-js`）生成整齐代码的多级别资源映射文件。
 
 ### JavaScript
-
-Compiler	Command	Instructions
-CoffeeScript	$ coffee -c square.coffee -m	The -m (--map) flag is all it takes for the compiler to output a source map, it will also handle adding the sourceMapURL comment pragma for you to the outputted file.
-TypeScript	$ tsc -sourcemap square.ts	The -sourcemap flag will generate the map and add the comment pragma.
-Traceur	$ traceur --source-maps=[file|inline]	With --source-maps=file, every output file ending in .js will have a sourcemap file ending in .map; with source-maps='inline', every output file ending in .js will end with a comment containing the sourcemap encoded in a data: URL.
-Babel	$ babel script.js --out-file script-compiled.js --source-maps	Use --source-maps or -s to generate Source Maps. Use --source-maps inline for inline Source Maps.
-UglifyJS	$ uglifyjs file.js -o file.min.js --source-map file.min.js.map	That is the very basic command needed to generate a source map for 'file.js'. This will also add the comment pragma to output file.
+| Compiler      |  Command      | Instructions          |
+|:-------------:|:-----------:  |:-------------:        |
+|[CoffeeScript](http://coffeescript.org/#source-maps)   | $ coffee -c square.coffee -m          |-m(--map)生成一个.map的资源映射文件|
+|[TypeScript](http://www.typescriptlang.org/)     | $ tsc -sourcemap square.ts            | -sourcemap生成带注释的source map|
+|[Traceur](https://github.com/google/traceur-compiler/wiki/SourceMaps)	    | $ traceur --source-maps=[file or inline] | `--source-maps=file`,生成的每个`.js`文件都有一个对应的`.map`文件; `source-maps='inline'`,生成的每个`.js`文件结尾处都会增加map文件的注释|
+|[Babel](https://babeljs.io/docs/usage/cli/#compile-with-source-maps)	        | $ babel script.js --out-file script-compiled.js --source-maps|	使用`--source-maps`或`-s`生成Source Maps. 使用`--source-maps inline`生成行内Source Maps.|
+|[UglifyJS](https://github.com/mishoo/UglifyJS2)	    | $ uglifyjs file.js -o file.min.js --source-map file.min.js.map	|一个为'file.js'生成映射文件的基础命令. 它也会自动加上注释|
 
 ### CSS
 
-Compiler	Command	Instructions
-Sass	$ scss --sourcemap styles.scss styles.css	Source Maps in Sass are supported since Sass 3.3.
-Less	$ lessc styles.less > styles.css --source-map styles.css.map	Implemented in 1.5.0. See issue #1050 for details and usage patterns.
-Stylus	$ stylus --sourcemaps styles.style styles.css	This will embed the sourcemap as a base64 encoded string directly in the out file.
-Compass	$ sass --compass --sourcemap --watch scss:css	Alternatively you can add `sourcemap: true` to your config.rb file.
-Autoprefixer		Follow the link to see how to use it and absorb an input sourcemap.
+| Compiler      |  Command      | Instructions          |
+|:-------------:|:-----------:  |:-------------:        |
+|[Sass](http://sass-lang.com/)	|$ scss --sourcemap styles.scss styles.css	| Sass 3.3 版本以后支持 Source Maps|
+|[Less](http://lesscss.org/)	|$ lessc styles.less > styles.css --source-map styles.css.map|	1.5.0版本之后可用. 查看[问题 #1050](https://github.com/less/less.js/issues/1050#issuecomment-25566463)详情.|
+|[Stylus](https://learnboost.github.io/stylus/)	|$ stylus --sourcemaps styles.style styles.css	|This will embed the sourcemap as a base64 encoded string directly in the out file.|
+|[Compass](http://compass-style.org/)	|$ sass --compass --sourcemap --watch scss:css	|Alternatively you can add `sourcemap: true` to your config.rb file.|
+|[Autoprefixer](https://github.com/postcss/autoprefixer)|		|点击链接查看明细|
 
-### Source Maps and DevTools
+### Source Maps 和 DevTools
 
-Now that you've got Source Maps properly set up, you might be happy to learn that DevTools has built-in support for both CSS and JS based Source Maps.
+想必现在你已经知道资源映射文件如何配置，你也许会乐意了解DevTools，因为它内置支持基于映射文件的CSS和JS。
 
-### Editing preprocessed CSS
+### 编辑CSS预处理器
 
-Head over to Edit Sass, Less or Stylus to learn more about how to edit and refresh styles linked to a source map directly within DevTools.
+点击此链接[Edit Sass, Less or Stylus](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/edit-styles)查看如何正确使用DevTools去编辑、刷新CSS样式表。
 
-### Editing and debugging preprocessed JavaScript
+### 编辑和调试JavaScript预处理文件
 
-Learn more about how to debug manified, compiled or transpiled JavaScript in the Sources Panel in Map Preprocessed Code to Source Code.
+学习怎样在Sources面板中调试、编译、转换JavaScript[Map Preprocessed Code to Source Code](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps).
