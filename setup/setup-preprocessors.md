@@ -31,17 +31,17 @@
 
 Source Map就是一个JSON格式的信息文件，它记录着源文件和压缩版文件之间的关联信息。当你编译文件到生产环境时，一般都会压缩和重组JavaScript文件，此时便生成一个资源映射文件，用以记录源文件内容信息。
 
-### Source Map是怎么工作的？
+### Source Map如何工作？
 
-For each CSS file it produces, a CSS preprocessor generates a source map file (.map) in addition to the compiled CSS. The source map file is a JSON file that defines a mapping between each generated CSS declaration and the corresponding line of the source file.
+在每次生成CSS文件时，CSS预编译器会在编译CSS的同时生成一个资源映射文件（.map）。该资源映射文件采用JSON格式，定义了CSS压缩文件和源CSS文件每一行对应关系的信息记录。
 
-Each CSS file contains an annotation that specifies the URL of its source map file, embedded in a special comment on the last line of the file:
+每个CSS文件都包含一个资源映射文件的URL路径，嵌在文件最后一行的的特殊注释中：
 
 ```
 /*# sourceMappingURL=<url> */
 ```
 
-For instance, given an Sass source file named styles.scss:
+例如，下例给出一个Sass的资源映射文件，`styles.scss`：
 
 ```
 %$textSize: 26px;
@@ -54,7 +54,7 @@ h2 {
 }
 ```
 
-Sass generates a CSS file, styles.css, with the sourceMappingURL annotation:
+Sass生成一个包含`sourceMappingURL`注解的CSS文件`styles.css`：
 
 ```
 h2 {
@@ -65,7 +65,7 @@ h2 {
 /*# sourceMappingURL=styles.css.map */
 ```
 
-Below is an example source map file:
+资源映射文件里的内容：
 
 ```
 {
@@ -76,23 +76,24 @@ Below is an example source map file:
 }
 ```
 
-## Verify web server can serve Source Maps
+## 确保web服务器可以支持Source Maps
 
-Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your Source Maps should be served with a MIME type of application/json, but Chrome will actually accept any content-type, for example application/octet-stream.
+部分网路服务器，如Google App Engine，需要在服务器上对每个文件都显式配置。既然如此，需要使用`application/json`的内容格式（MIME）的映射文件，但是Chrome浏览器还支持[其他内容格式](https://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-javascript-source-map-files)，比如说`application/octet-stream`。
 
-### Bonus: Source mapping via custom header
+### 扩展阅读: Source mapping 之 自定义头
 
-If you don't want an extra comment in your file, use an HTTP header field on the minified JavaScript file to tell DevTools where to find the source map. This requires configuration or customization of your web server and is beyond the scope of this document.
+如果不想在文件中添加扩展注释，你可以在压缩js文件中使用`HTTP头`字段，它会告诉DevTools资源映射文件的位置。这要求配置或自定义你的Web服务器，这不在本文的讨论范围。
 
 ```
 X-SourceMap: /path/to/file.js.map
 ```
 
-Like the comment, this tells DevTools and other tools where to look for the source map associated with a JavaScript file. This header also gets around the issue of referencing Source Maps in languages that don't support single-line comments.
+与注释一样，HTTP头的方式会告知DevTools和其他工具资源映射文件的位置信息。除此之外，该方式还可以获取资源映射文件反馈的问题信息，而单行注释并不支持。
 
-## Supported preprocessors
+## 支持的预编译器
 
-Just about any compiled to JavaScript language has an option to generate Source Maps today – including Coffeescript, TypeScript, JSX and many more. You can additionally use Source Maps on the server side within Node, in our CSS with via Sass, Less and more, using browserify which gives you node-style require abilities, and through minification tools like uglify-js which also adds the neat ability to generate multi-level Source Maps.
+ You can additionally use Source Maps on the server side within Node, in our CSS with via Sass, Less and more, using browserify which gives you node-style require abilities, and through minification tools like uglify-js which also adds the neat ability to generate multi-level Source Maps.
+几乎当下所有的JS编译器都有生成资源映射文件的选项，包括`Coffeescript`,`TypeScript`,`JSX`等等。另外，你可以在Node服务器中使用映射资源文件，在CSS中使用Sass,Less等预编译器，使用[browserify](http://blog.fens.me/nodejs-browserify/)（一款可以跑在浏览器上的Node程序）
 
 ### JavaScript
 

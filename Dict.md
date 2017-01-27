@@ -82,3 +82,12 @@ US [ə'perənt] UK [ə'pærənt]
 ## work around
 `Web` 绕过；来绕开；绕个弯解决
 
+## verify
+US ['verɪ.faɪ] UK ['verɪfaɪ]
+
+`v.` 核实；证实；证明；查对
+
+`Web` 验证；校验；检验
+
+
+
