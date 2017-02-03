@@ -1,36 +1,35 @@
-# Set Up Your Build Tools
+# 配置你的编译工具
 
-Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools. Every site should have a development version and a production version.
+从头开始编译你的多设备站点，学习如何提升开发效率，并使用编译工具集来创建一个加载迅速的站点。每个站点都应该部署一套开发版本和生产版本。
 
-The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.
+开发版本的文件，包括HTML，CSS，JS和图片等，都保持正确清晰的格式，如此可以让你乐于其中。
 
-A production version will take these files, minify them, concatenate / merge them and optimise files like images.
-Web developers have to think about a million things at once and the build step is one of the most critical, yet most cumbersome to get started with. You have to work out all the tasks that you need to automate such as: Image compression, CSS minification, JavaScript concatenation, Responsive testing, Unit testing, the list goes on...
+生产环境上的版本就需要把这些文件做相应处理，包括压缩、串联或合并、优化图片等操作。网页开发人员需要考虑成千上万的事情，而编译步骤是最关键的，然而很多步骤都是很繁杂的。你必须寻求一种自动化完成工作的方式，比如：图片压缩，CSS压缩，JavaScript关联，响应测试，关联测试等等...
 
-Follow this guide to learn the best way to structure your workflow so that the sites you create already follow all the best practices from the minute you start.
+跟着这篇导读去学习如何最好地规划你的工作流，如此一来你已经创建好站点就成为接下来开始改进的最好的练习。
 
-**TL;DR**
+**长话短说**
 
-* Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
-* Use tools like LiveReload to make your development process smoother.
+* 你的编译程序必须性能优异，这些工具应该实现自动化压缩或关联Javascript、CSS、HTML和图片。
+* 使用工具（如LiveReload）让你的开发进程更加流畅。
 
-Before you start coding, you need to consider how to optimise and build the production version of your site. Setting up this workflow from the start prevents any nasty surprises at the end of the project and you can add tools into your workflow that speed up your development, doing the monotonous tasks for you.
+开始编码之前，你需要考虑如何优化和编译站点的生产环境版本。从一开始就配置好工作流，从而避免在工程结束的时候出现一大堆令人讨厌的怪事，在工作流中增加工具来帮你完成一些单调的、重复性的工作，如此一来可以提升你的开发效率。
 
-## What is a build process?
+## 什么是编译进程？
 
-A build process is a set of tasks which run over your projects files, compiling and testing code during development and used to create the deployment version of your site. Your build process shouldn't be a set of tasks you run at the end of your development workflow.
+编译进程是在开发期间替你编译、测试、运行程序的任务的总称，它常用来为站点创建开发版本。你的编译进程不应该是开发工作流末端的任务。
 
-The most popular tools for implementing a build process are Gulp and Grunt, both of which are command line tools. If you have no experience of either, use Gulp, we use it for Web Starter Kit and recommend you do the same.
+最流行编译进程工具无外乎[Gulp](http://gulpjs.com/)和[Grunt](http://gruntjs.com/)，二者都是命令行工具。如果你对此都没有过接触，我们推荐你使用`Gulp`，也是“网页开发入门套件”其一。
 
-There are tools which have GUIs and may be a bit easier to get to grips with but will be less flexible.
+有许多带GUI界面的工具，可能在初涉入门时更简单易用一些，但是缺伐一定的灵活性。
 
-|Supported Platforms & Tool Name||
+|支持的平台|工具名|
 |:---|:---|
 |OS X / Windows| [Prepros](http://alphapixels.com/prepros/) |
 |OS X|	[CodeKit](https://incident57.com/codekit/) |
 |OS X|	[HammerForMac](http://hammerformac.com/) |
 
-## What tasks should be in a build process?
+## 编译进程能做什么？
 
 In the following sections, we're going to look at the most common tasks you should have in your build process and recommend tasks for Grunt and Gulp.
 
@@ -40,8 +39,8 @@ For a good example of a build process, check out the getting started guide for W
 
 If you are looking to create your own build process and you're new to Gulp or Grunt, the quick start guides will be the best place to get into on installing and running your first build process:
 
-* Grunt Getting Started
-* Gulp Getting Started
+* [Grunt Getting Started](http://gruntjs.com/getting-started)
+* [Gulp Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
 
 ### Use concatenation & minification for a faster site
 

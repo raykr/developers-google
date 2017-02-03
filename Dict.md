@@ -89,5 +89,44 @@ US ['verɪ.faɪ] UK ['verɪfaɪ]
 
 `Web` 验证；校验；检验
 
+## cumbersome
+US ['kʌmbərsəm] UK ['kʌmbə(r)s(ə)m]
 
+`adj.` 大而笨重的；难以携带的；缓慢复杂的；冗长的
 
+`Web` 麻烦的；讨厌的；累赘的
+
+## critical
+US ['krɪtɪk(ə)l] UK ['krɪtɪk(ə)l]
+
+`adj.` 批评的；批判性的；挑剔的；极重要的
+
+`Web` 临界的；危急的；关键的
+
+## optimise
+US ['ɒptɪmaɪz] UK ['ɒptɪmaɪz]
+
+`v.` 使最优化；充分利用
+
+`Web` 使优化；优化使用效能；表示乐观
+
+## performance
+US [pə'fɔrməns] UK [pə(r)'fɔː(r)məns]
+
+`n.` 性能；表现；业绩；表演
+
+`Web` 绩效；演出；效能
+
+## prevent
+US [prɪ'vent] UK [prɪ'vent]
+
+`v.` 阻止；阻碍；阻挠
+
+`Web` 防止；预防；妨碍
+
+## flexible
+US ['fleksəb(ə)l] UK ['fleksəb(ə)l]
+
+`adj.` 能适应新情况的；灵活的；可变动的；柔韧的
+
+`Web` 易弯曲的；弹性；有弹性的
