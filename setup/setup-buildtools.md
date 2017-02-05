@@ -31,18 +31,18 @@
 
 ## 编译进程能做什么？
 
-In the following sections, we're going to look at the most common tasks you should have in your build process and recommend tasks for Grunt and Gulp.
+在接下来的章节里，我们将会看到你的编译进程最应该实现的任务，以及Grunt和Gulp力所能及的任务有哪些。
 
-This requires a lot of trial and error to get each piece set-up the way you want and can be daunting if you are new to build processes.
+如果你从未涉猎过编译进程，这将会花费大量的实践与错误，才能一点一点的配置成你想要的样子。
 
-For a good example of a build process, check out the getting started guide for Web Starter Kit, which goes through how to use Web Starter Kit and explains what each of the commands in the Gulp file do. This can be used as a quick way to get set-up and then you can make changes if needed.
+一个非常好的实践，就是从网页开发入门套件开始入手，它会告诉你汝和使用该套件工具，会为你一一解答Gulp各命令功能。这将会是你对编译进程快速入门配置和更改的途径。
 
-If you are looking to create your own build process and you're new to Gulp or Grunt, the quick start guides will be the best place to get into on installing and running your first build process:
+如果你是新手，从未用过Gulp或Grunt，那么点击下方的链接查看说明文档，是最好的途径去学着安装和运行你的第一个编译进程：
 
 * [Grunt Getting Started](http://gruntjs.com/getting-started)
 * [Gulp Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started)
 
-### Use concatenation & minification for a faster site
+### 在网站上使用压缩过的文件
 
 For those unfamiliar with the terms concatenation and minification, concatenation means simply merging multiple files together, i.e. copying and pasting several files into one. The reason we do this is that it's more efficient for a browser to fetch one file, rather than lots of small files.
 
